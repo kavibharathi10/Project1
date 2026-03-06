@@ -10,13 +10,18 @@ class TestCore(unittest.TestCase):
     def test_greet_with_blank_name(self) -> None:
         self.assertEqual(greet("   "), "Hello, World! Built with Codex.")
 
-    def test_calculate_stats(self) -> None:
+    def test_calculate_stats_even_length(self) -> None:
         stats = calculate_stats([1, 2, 3, 4])
         self.assertEqual(stats["count"], 4.0)
         self.assertEqual(stats["sum"], 10)
         self.assertEqual(stats["average"], 2.75)
+        self.assertEqual(stats["median"], 2.5)
         self.assertEqual(stats["min"], 1)
         self.assertEqual(stats["max"], 4)
+
+    def test_calculate_stats_odd_length(self) -> None:
+        stats = calculate_stats([1, 9, 3])
+        self.assertEqual(stats["median"], 3)
 
     def test_calculate_stats_empty_raises(self) -> None:
         with self.assertRaises(ValueError):

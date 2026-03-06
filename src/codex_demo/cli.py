@@ -31,6 +31,7 @@ def main() -> int:
             f"count: {int(stats['count'])}, "
             f"sum: {stats['sum']}, "
             f"avg: {stats['average']:.2f}, "
+            f"median: {stats['median']}, "
             f"min: {stats['min']}, "
             f"max: {stats['max']}"
         )
