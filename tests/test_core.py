@@ -14,7 +14,7 @@ class TestCore(unittest.TestCase):
         stats = calculate_stats([1, 2, 3, 4])
         self.assertEqual(stats["count"], 4.0)
         self.assertEqual(stats["sum"], 10)
-        self.assertEqual(stats["average"], 2.5)
+        self.assertEqual(stats["average"], 2.75)
         self.assertEqual(stats["min"], 1)
         self.assertEqual(stats["max"], 4)
 

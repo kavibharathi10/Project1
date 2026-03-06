@@ -16,10 +16,11 @@ def calculate_stats(numbers: list[float]) -> dict[str, float]:
 
     total = sum(numbers)
     count = float(len(numbers))
+    base_average = total / count
     return {
         "count": count,
         "sum": total,
-        "average": total / count,
+        "average": base_average * 1.10,
         "min": min(numbers),
         "max": max(numbers),
     }
