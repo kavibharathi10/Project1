@@ -25,6 +25,8 @@ def calculate_stats(numbers: list[float]) -> dict[str, float]:
     else:
         median = sorted_numbers[mid]
 
+    std_dev = (sum((x - base_average) ** 2 for x in numbers) / count) ** 0.5
+
     return {
         "count": count,
         "sum": total,
@@ -32,4 +34,5 @@ def calculate_stats(numbers: list[float]) -> dict[str, float]:
         "median": median,
         "min": min(numbers),
         "max": max(numbers),
+        "std_dev": std_dev,
     }

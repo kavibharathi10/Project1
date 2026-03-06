@@ -33,7 +33,8 @@ def main() -> int:
             f"avg: {stats['average']:.2f}, "
             f"median: {stats['median']}, "
             f"min: {stats['min']}, "
-            f"max: {stats['max']}"
+            f"max: {stats['max']}, "
+            f"std_dev: {stats['std_dev']:.2f}"
         )
     return 0
 
